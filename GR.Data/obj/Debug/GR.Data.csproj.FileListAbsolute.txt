@@ -1,0 +1,14 @@
+C:\Interview\GR.Data\bin\Debug\GR.Data.dll
+C:\Interview\GR.Data\bin\Debug\GR.Data.pdb
+C:\Interview\GR.Data\bin\Debug\GR.Contracts.dll
+C:\Interview\GR.Data\bin\Debug\GR.Contracts.pdb
+C:\Interview\GR.Data\obj\Debug\GR.Data.csprojResolveAssemblyReference.cache
+C:\Interview\GR.Data\obj\Debug\GR.Data.dll
+C:\Interview\GR.Data\obj\Debug\GR.Data.pdb
+C:\Interview\GR.Data\bin\Debug\GR.Data.dll.config
+C:\Interview\GR.Data\bin\Debug\GR.Common.dll
+C:\Interview\GR.Data\bin\Debug\GR.Common.pdb
+C:\Interview\GR.Data\bin\Debug\Newtonsoft.Json.dll
+C:\Interview\GR.Data\bin\Debug\System.Net.Http.Formatting.dll
+C:\Interview\GR.Data\bin\Debug\GR.Common.dll.config
+C:\Interview\GR.Data\bin\Debug\Newtonsoft.Json.xml

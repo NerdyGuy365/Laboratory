@@ -1,0 +1,5 @@
+C:\Interview\GR.Contracts\bin\Debug\GR.Contracts.dll
+C:\Interview\GR.Contracts\bin\Debug\GR.Contracts.pdb
+C:\Interview\GR.Contracts\obj\Debug\GR.Contracts.dll
+C:\Interview\GR.Contracts\obj\Debug\GR.Contracts.pdb
+C:\Interview\GR.Contracts\obj\Debug\GR.Contracts.csprojResolveAssemblyReference.cache

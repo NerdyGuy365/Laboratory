@@ -1,0 +1,17 @@
+C:\Interview\GR.Client\GR.Common\bin\Debug\GR.Common.dll
+C:\Interview\GR.Client\GR.Common\bin\Debug\GR.Common.pdb
+C:\Interview\GR.Client\GR.Common\obj\Debug\GR.Common.csprojResolveAssemblyReference.cache
+C:\Interview\GR.Client\GR.Common\obj\Debug\GR.Common.dll
+C:\Interview\GR.Client\GR.Common\obj\Debug\GR.Common.pdb
+C:\Interview\GR.Client\GR.Common\bin\Debug\GR.Common.dll.config
+C:\Interview\GR.Client\GR.Common\bin\Debug\Newtonsoft.Json.dll
+C:\Interview\GR.Client\GR.Common\bin\Debug\System.Net.Http.dll
+C:\Interview\GR.Client\GR.Common\bin\Debug\System.Net.Http.Extensions.dll
+C:\Interview\GR.Client\GR.Common\bin\Debug\System.Net.Http.Formatting.dll
+C:\Interview\GR.Client\GR.Common\bin\Debug\System.Net.Http.Primitives.dll
+C:\Interview\GR.Client\GR.Common\bin\Debug\System.Net.Http.WebRequest.dll
+C:\Interview\GR.Client\GR.Common\bin\Debug\Vse.Web.Serialization.dll
+C:\Interview\GR.Client\GR.Common\bin\Debug\Newtonsoft.Json.xml
+C:\Interview\GR.Client\GR.Common\bin\Debug\System.Net.Http.xml
+C:\Interview\GR.Client\GR.Common\bin\Debug\System.Net.Http.WebRequest.xml
+C:\Interview\GR.Client\GR.Common\bin\Debug\Vse.Web.Serialization.pdb
