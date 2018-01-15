@@ -1,0 +1,5 @@
+Richardson|Mark|Male|Red|01/01/79
+Rocker|Betty|Female|Blue|01/01/80
+Smith|Jim|Male|Orange|01/01/81
+Doe|John|Male|Orange|01/01/82
+Doe|Jane|Female|Orange|01/01/83
