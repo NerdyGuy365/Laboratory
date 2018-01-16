@@ -127,7 +127,7 @@ namespace GR.Client.Console
 
             //Display data to screen.
             System.Console.WriteLine("====================================================");
-            System.Console.WriteLine("Genders");
+            System.Console.WriteLine("Output 1 - Sorted By Genders");
             System.Console.WriteLine("====================================================");
 
             DisplayData(SortBy.Genders);
@@ -136,7 +136,7 @@ namespace GR.Client.Console
                 Thread.Sleep(1000);
 
             System.Console.WriteLine("====================================================");
-            System.Console.WriteLine("Birthdates");
+            System.Console.WriteLine("Output 2 - Sorted By Birth Dates");
             System.Console.WriteLine("====================================================");
 
             DisplayData(SortBy.Birthdates);
@@ -145,7 +145,7 @@ namespace GR.Client.Console
                 Thread.Sleep(1000);
 
             System.Console.WriteLine("====================================================");
-            System.Console.WriteLine("Names");
+            System.Console.WriteLine("Output 3 - Sorted By Last Names");
             System.Console.WriteLine("====================================================");
 
             DisplayData(SortBy.Names);
