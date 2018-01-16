@@ -1,0 +1,113 @@
+﻿//HTTP/1.1 200 OK
+//Content-Length: 2416
+//Content-Type: application/json; charset=utf-8
+//Server: Microsoft-HTTPAPI/2.0
+//Date: Tue, 16 Jan 2018 05:20:35 GMT
+
+[
+  {
+    "firstName": "Mark",
+    "lastName": "Richardson",
+    "gender": "Male",
+    "favoriteColor": "Red",
+    "dateOfBirth": "1979-01-01T00:00:00"
+  },
+  {
+    "firstName": "Mark",
+    "lastName": "Richardson2",
+    "gender": "Male",
+    "favoriteColor": "Red",
+    "dateOfBirth": "1979-01-01T00:00:00"
+  },
+  {
+    "firstName": "Mark",
+    "lastName": "Richardson3",
+    "gender": "Male",
+    "favoriteColor": "Red",
+    "dateOfBirth": "1979-01-01T00:00:00"
+  },
+  {
+    "firstName": "Betty",
+    "lastName": "Rocker",
+    "gender": "Female",
+    "favoriteColor": "Blue",
+    "dateOfBirth": "1980-01-01T00:00:00"
+  },
+  {
+    "firstName": "Betty",
+    "lastName": "Rocker2",
+    "gender": "Female",
+    "favoriteColor": "Blue",
+    "dateOfBirth": "1980-01-01T00:00:00"
+  },
+  {
+    "firstName": "Betty",
+    "lastName": "Rocker3",
+    "gender": "Female",
+    "favoriteColor": "Blue",
+    "dateOfBirth": "1980-01-01T00:00:00"
+  },
+  {
+    "firstName": "Jim",
+    "lastName": "Smith",
+    "gender": "Male",
+    "favoriteColor": "Orange",
+    "dateOfBirth": "1981-01-01T00:00:00"
+  },
+  {
+    "firstName": "Jim",
+    "lastName": "Smith2",
+    "gender": "Male",
+    "favoriteColor": "Orange",
+    "dateOfBirth": "1981-01-01T00:00:00"
+  },
+  {
+    "firstName": "Jim",
+    "lastName": "Smith3",
+    "gender": "Male",
+    "favoriteColor": "Orange",
+    "dateOfBirth": "1981-01-01T00:00:00"
+  },
+  {
+    "firstName": "John",
+    "lastName": "Doe",
+    "gender": "Male",
+    "favoriteColor": "Orange",
+    "dateOfBirth": "1982-01-01T00:00:00"
+  },
+  {
+    "firstName": "John",
+    "lastName": "Doe2",
+    "gender": "Male",
+    "favoriteColor": "Orange",
+    "dateOfBirth": "1982-01-01T00:00:00"
+  },
+  {
+    "firstName": "John",
+    "lastName": "Doe3",
+    "gender": "Male",
+    "favoriteColor": "Orange",
+    "dateOfBirth": "1982-01-01T00:00:00"
+  },
+  {
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "gender": "Female",
+    "favoriteColor": "Orange",
+    "dateOfBirth": "1983-01-01T00:00:00"
+  },
+  {
+    "firstName": "Jane",
+    "lastName": "Doe2",
+    "gender": "Female",
+    "favoriteColor": "Orange",
+    "dateOfBirth": "1983-01-01T00:00:00"
+  },
+  {
+    "firstName": "Jane",
+    "lastName": "Doe3",
+    "gender": "Female",
+    "favoriteColor": "Orange",
+    "dateOfBirth": "1983-01-01T00:00:00"
+  }
+]
