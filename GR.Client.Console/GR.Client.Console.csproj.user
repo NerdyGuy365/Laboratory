@@ -4,6 +4,6 @@
     <StartArguments>C:\Development\Repos\NerdyGuy365\GR.Client.Console\LocalData\FileStructure1.txt C:\Development\Repos\NerdyGuy365\GR.Client.Console\LocalData\FileStructure2.txt C:\Development\Repos\NerdyGuy365\GR.Client.Console\LocalData\FileStructure3.txt</StartArguments>
   </PropertyGroup>
   <PropertyGroup>
-    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectView>ProjectFiles</ProjectView>
   </PropertyGroup>
 </Project>

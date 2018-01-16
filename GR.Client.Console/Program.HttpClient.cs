@@ -6,6 +6,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
+using System.Web.Http;
 
 namespace GR.Client.Console
 {
@@ -34,7 +35,7 @@ namespace GR.Client.Console
         /// </summary>
         /// <param name="serviceEndPoint"></param>
         /// <returns></returns>
-        public async Task<List<T>> GetData()
+        public async Task<HttpResponseMessage> GetData()
         {
             //Create a new http client.
             using (var client = new HttpClient())
@@ -44,11 +45,10 @@ namespace GR.Client.Console
                 client.BaseAddress = new Uri(_serviceEndPoint);
 
                 //Hit the service.
-                var response = await client.GetStringAsync("").ConfigureAwait(false);
-                List<T> value = JsonConvert.DeserializeObject<List<T>>(response);
+                HttpResponseMessage response = await client.GetAsync("").ConfigureAwait(false);
 
                 //Return the data we got back from the server.
-                return value;
+                return response;
             }
         }
 
@@ -62,12 +62,15 @@ namespace GR.Client.Console
             //Create a new http client.
             using (var client = new HttpClient())
             {
-                //Hit the service.
+                //We are working with JSON data.
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 client.BaseAddress = new Uri(_serviceEndPoint);
-                var response = await client.PostAsJsonAsync("", poco).ConfigureAwait(false);
+
+                //Hit the service.
+                HttpResponseMessage response = await client.PostAsJsonAsync("", poco).ConfigureAwait(false);
 
                 //Return the response we got back from the server.
-                return new HttpResponseMessage(response.StatusCode);
+                return response;
             }
         }
     }

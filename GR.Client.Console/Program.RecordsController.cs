@@ -24,14 +24,16 @@ namespace GR.Client.Console
         /// <returns></returns>
         [HttpGet]
         [ActionName("Birthdates")]
-        public List<Person> GetBirthDates()
+        public IHttpActionResult GetBirthDates()
         {
             //Make sure we have something to return.
             //Let the client know if we don't.
-            if (_people == null || _people.Count == 0) throw new Exception("No records found");
+            if (_people == null || _people.Count == 0) return InternalServerError(new Exception("No records found"));
 
-            //Get results and sort correctly. 
-            return _people.OrderBy(p => p.DateOfBirth).ToList();
+            //Get results and sort correctly.
+
+            //Return back 200.
+            return Ok(_people.OrderBy(p => p.DateOfBirth).ToList());
         }
 
         /// <summary>
@@ -40,14 +42,16 @@ namespace GR.Client.Console
         /// <returns></returns>
         [HttpGet]
         [ActionName("Genders")]
-        public List<Person> GetGenders()
+        public IHttpActionResult GetGenders()
         {
             //Make sure we have something to return.
             //Let the client know if we don't.l
-            if (_people == null || _people.Count == 0) throw new Exception("No records found");
+            if (_people == null || _people.Count == 0) return InternalServerError(new Exception("No records found"));
 
             //Get results and sort correctly.
-            return _people.OrderBy(p => p.Gender).ThenBy(l => l.LastName).ToList();
+
+            //Return back 200.
+            return Ok(_people.OrderBy(p => p.Gender).ThenBy(l => l.LastName).ToList());
         }
 
         /// <summary>
@@ -56,14 +60,16 @@ namespace GR.Client.Console
         /// <returns></returns>
         [HttpGet]
         [ActionName("Names")]
-        public List<Person> GetNames()
+        public IHttpActionResult GetNames()
         {
             //Make sure we have something to return.
             //Let the client know if we don't.
-            if (_people == null || _people.Count == 0) throw new Exception("No records found");
+            if (_people == null || _people.Count == 0) return InternalServerError(new Exception("No records found"));
 
             //Get results and sort correctly.
-            return _people.OrderByDescending(p => p.LastName).ToList();
+
+            //Return back 200.
+            return Ok(_people.OrderByDescending(p => p.LastName).ToList());
         }
 
         /// <summary>
@@ -71,9 +77,13 @@ namespace GR.Client.Console
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public void SavePerson([FromBody]Person person)
+        public IHttpActionResult SavePerson([FromBody]Person person)
         {
+            //Add to in memory static collection.
             _people.Add(person);
+
+            //Return back 201.
+            return Created("",_people);
         }
     }
 }

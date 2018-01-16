@@ -1,0 +1,2 @@
+C:\Repo\NerdyGuy365\Laboratory\GR.Client.Console.Tests\obj\Debug\GR.Client.Console.Tests.csprojResolveAssemblyReference.cache
+C:\Repo\NerdyGuy365\Laboratory\GR.Client.Console.Tests\obj\Debug\GR.Client.Console.Tests.csproj.CoreCompileInputs.cache
