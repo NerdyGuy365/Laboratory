@@ -1,5 +1,5 @@
 ﻿using GR.Business;
-using GR.Client.Console.SelfHostingREST;
+using GR.Client.Console;
 using GR.Contracts.DataContracts;
 using Microsoft.Owin.Hosting;
 using System;
@@ -9,10 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
+using System.Web.Http;
+using System.Net.Http;
+using Owin;
 
 namespace GR.Client.Console
 {
-    public class Program
+    public partial class Program
     {
         //Form scoper variables section.
         private static List<Person> _people = new List<Person>();
@@ -21,32 +24,31 @@ namespace GR.Client.Console
         private static string _serviceEndPoint = ConfigurationManager.AppSettings["RESTURI"];
 
         private static Thread _serviceThread;
+        private static bool _serverReady = false;
 
         public static void Main(string[] args)
         {
+            System.Console.WriteLine("How would you like to sort the data? Press G for Gender, N for Names or B for Birthdates");
+            string sortOption = System.Console.ReadLine();
+
             try
             {
-                //See Actions Folder in project.
-
                 //Combine the 3 files into a single set of records.
-                foreach(var file in args)
+                foreach (var file in args)
                     _people.AddRange(PersonHelpers.ParsePersonDataFromFile(file));
 
                 //Start REST service.
                 _serviceThread = new Thread(StartRESTService);
                 _serviceThread.Start();
-                Thread.Sleep(3000); 
-                
-                //Let's post at least 5 different lines to the service.
-                var result = PostLine(1);
-                result = PostLine(2);
-                result = PostLine(3);
-                result = PostLine(4);
-                result = PostLine(5);
 
-                System.Console.ReadLine();
+                //Wait until the server is ready.
+                while (_serverReady == false)
+                    Thread.Sleep(1000);
+
+                //Server is ready....Now begin.
+                Start(sortOption);
             }
-            catch(Exception ex)
+            catch
             {
                 //An exception can occur when dealing with files. 
                 //Since this is a demo. Just throw a dummy message.
@@ -55,34 +57,35 @@ namespace GR.Client.Console
         }
 
         /// <summary>
-        /// This is a helper method used to post all data.
+        /// This method will be posting some data and displaying it afterwards. 
         /// </summary>
-        /// <returns></returns>
-        private static async Task<string> PostLine(int lineNumber)
+        /// <param name="sortOption"></param>
+        private static void Start(string sortOption)
         {
-            try
-            {
-                return await _serviceClient.PostRecord(_people[lineNumber - 1]).ConfigureAwait(false);
-            }
-            catch (Exception ex)
-            {
-                //Since the service will display a friendly error.
-                //Let the service message inform the user.
-                return ex.ToString();
-            }
+            //Let's post some data to the server.           
+            PostData(15);
+            
+            //Wait until all posting to the server is complete.
+            while (_actionDone == false)
+                Thread.Sleep(1000);
+
+            //Display our data to the screen.
+            DisplayData(sortOption);
         }
 
-        /// <summary>
-        /// This method will start the REST service.
-        /// </summary>
-        private static void StartRESTService()
+        private static async void DisplayData(string sortOption)
         {
-            using (WebApp.Start<Startup>(_serviceEndPoint))
-            {
-                System.Console.WriteLine("Web Server is running.");
-                System.Console.WriteLine("Press any key to quit.");
-                System.Console.ReadLine();
-            }
+            //Let's grab the data and sort it correctly.
+            List<Person> people = await GetData(sortOption);
+
+            //Wait until all posting to the server is complete.
+            while (_actionDone == false)
+                Thread.Sleep(1000);
+
+            //Print out values to screen.
+            foreach (var person in people)
+                System.Console.WriteLine(person.FirstName + " " + person.LastName + " " + person.Gender + " " + person.FavoriteColor + " " + person.DateOfBirth.ToShortDateString());
+                System.Console.WriteLine("");
         }
     }
 }

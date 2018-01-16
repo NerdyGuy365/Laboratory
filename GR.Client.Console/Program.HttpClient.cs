@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
 
-namespace GR.Client.Console.SelfHostingREST
+namespace GR.Client.Console
 {
     /// <summary>
     /// The following class object is used to handle REST http calls from a client to a server.

@@ -8,22 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace GR.Client.Console.SelfHostingREST
+namespace GR.Client.Console
 {
     /// <summary>
     /// The purpose of this class is to handle incoming request from a client.
     /// </summary>
-    public class PersonREST : ApiController
+    public class RecordsController : ApiController
     {
         //Form scope variables
-        private List<Person> _people = new List<Person>();
+        private static List<Person> _people = new List<Person>();
 
         /// <summary>
         /// Used to get a listing of people sorted by birth dates.
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [Route("Records/Birthdate")]
+        [ActionName("Birthdates")]
         public List<Person> GetBirthDates()
         {
             //Make sure we have something to return.
@@ -39,7 +39,7 @@ namespace GR.Client.Console.SelfHostingREST
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [Route("Records/Gender")]
+        [ActionName("Genders")]
         public List<Person> GetGenders()
         {
             //Make sure we have something to return.
@@ -55,7 +55,7 @@ namespace GR.Client.Console.SelfHostingREST
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [Route("Records/Name")]
+        [ActionName("Names")]
         public List<Person> GetNames()
         {
             //Make sure we have something to return.
@@ -71,7 +71,6 @@ namespace GR.Client.Console.SelfHostingREST
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        [Route("Records")]
         public void SavePerson([FromBody]Person person)
         {
             _people.Add(person);

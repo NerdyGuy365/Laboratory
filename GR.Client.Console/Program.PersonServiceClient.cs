@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GR.Client.Console.SelfHostingREST
+namespace GR.Client.Console
 {
     public class PersonHttpClient
     {
@@ -50,32 +50,6 @@ namespace GR.Client.Console.SelfHostingREST
 
             //If the service did not return OK as status.
             //We want to ease the concerns of the user and tell them the service is down for maintainence.
-
-            //Meanwhile... we internally let technical support know.
-            if (result.StatusCode != System.Net.HttpStatusCode.OK)
-                throw new Exception("The service is currently down for maintainence...Please try again later.");
-
-            //ADD TECHNICAL SUPPORT NOTIFICATION CODE HERE.
-
-            return "OK";
-        }
-
-        public async Task<string> PostRecords(List<Person> people)
-        {
-            //Declare variables
-            HttpClient<List<Person>> httpClient = new HttpClient<List<Person>>(_serviceEndPoint + "/RecordsMultiple");
-
-            //Since this is a service call...We want to give control back to the caller of this method
-            var result = await httpClient.PostData(people).ConfigureAwait(false);
-
-            //If the service did not return OK as status.
-            //We want to ease the concerns of the user and tell them the service is down for maintainence.
-
-            //Meanwhile... we internally let technical support know.
-            if (result.StatusCode != System.Net.HttpStatusCode.OK)
-                throw new Exception("The service is currently down for maintainence...Please try again later.");
-
-            //ADD TECHNICAL SUPPORT NOTIFICATION CODE HERE.
 
             return "OK";
         }
