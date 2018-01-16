@@ -31,23 +31,26 @@ namespace GR.Client.Console
         /// Our standard generic get data method.
         /// </summary>
         /// <param name="sortOption"></param>
-        private static async Task<List<Person>> GetData(string sortOption)
+        private static async Task<List<Person>> GetData(SortBy sortOption)
         {            
             List<Person> people = null;
 
             _actionDone = false;
 
-            //Let's get birthdate data.
-            switch (sortOption.ToUpper())
+            //In the concept of a Factory...Decide on how we will sort it and sort it.
+            switch (sortOption)
             {
-                case "B":
-                    people = await GetPeople(SortBy.Birthdates);
+                case SortBy.Birthdates:
+                    people = await _serviceClient.GetBirthDates().ConfigureAwait(false);
                     break;
-                case "G":
-                    people = await GetPeople(SortBy.Genders);
+
+                case SortBy.Genders:
+                    people = await _serviceClient.GetGenders().ConfigureAwait(false);
                     break;
-                case "N":
-                    people = await GetPeople(SortBy.Names);
+
+                case SortBy.Names:
+                default:
+                    people =  await _serviceClient.GetNames().ConfigureAwait(false);
                     break;
             }
 
@@ -79,31 +82,11 @@ namespace GR.Client.Console
             //We are finished posting. Could use delegates as well to return an event if needed.
             _actionDone = true;            
         }
-
-        /// <summary>
-        /// This method will grad the data from the server and sort it correctly.
-        /// </summary>
-        /// <param name="sortBy"></param>
-        /// <returns></returns>
-        private static async Task<List<Person>> GetPeople(SortBy sortBy)
-        {
-            //In the concept of a Factory...Decide on how we will sort it and sort it.
-            switch(sortBy)
-            {                
-                case SortBy.Birthdates:
-                    return await _serviceClient.GetBirthDates().ConfigureAwait(false);
-
-                case SortBy.Genders:
-                    return await _serviceClient.GetGenders().ConfigureAwait(false);
-
-                case SortBy.Names:
-                default:
-                    return await _serviceClient.GetNames().ConfigureAwait(false);
-               
-            }
-        }
     }
 
+    /// <summary>
+    /// The purpose of this enum is to provide a univeral way of sorting.
+    /// </summary>
     public enum SortBy
     {
         Birthdates,

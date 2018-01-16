@@ -62,7 +62,7 @@ namespace GR.Client.Console
         /// The following method is used to hit the REST service and data data to the screen.
         /// </summary>
         /// <param name="sortOption"></param>
-        private static async void DisplayData(string sortOption)
+        private static async void DisplayData(SortBy sortOption)
         {
             //Let's grab the data and sort it correctly.
             List<Person> people = await GetData(sortOption);
@@ -122,8 +122,23 @@ namespace GR.Client.Console
             while (_actionDone == false)
                 Thread.Sleep(1000);
 
-            //Display our data to the screen.
-            DisplayData(sortOption);
+            //Determine how the user wants to sort.
+            //Display data to screen.
+            switch(sortOption.ToUpper())
+            {
+                case "B": //Birthdates
+                    DisplayData(SortBy.Birthdates);
+                    break;
+
+                case "G": //Genders
+                    DisplayData(SortBy.Genders);
+                    break;
+
+                case "N": //Names
+                default:
+                    DisplayData(SortBy.Names);
+                    break;
+            }
         }
     }
 }

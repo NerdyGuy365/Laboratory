@@ -48,9 +48,7 @@ namespace GR.Client.Console
             //Since this is a service call...We want to give control back to the caller of this method
             var result = await httpClient.PostData(person).ConfigureAwait(false);
 
-            //If the service did not return OK as status.
-            //We want to ease the concerns of the user and tell them the service is down for maintainence.
-
+            //Everything went ok.
             return "OK";
         }
     }
