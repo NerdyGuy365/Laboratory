@@ -53,7 +53,7 @@ namespace GR.Client.Console
             {
                 //An exception can occur when dealing with files. 
                 //Since this is a demo. Just throw a dummy message.
-                System.Console.WriteLine("It looks like you might have have a file in the correct place. Please double check the LocalData folder.");
+                System.Console.WriteLine("It looks like you might not have a file in the correct place. Please double check the LocalData folder.");
             }
         }
 
