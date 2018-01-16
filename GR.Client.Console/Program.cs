@@ -28,6 +28,7 @@ namespace GR.Client.Console
 
         public static void Main(string[] args)
         {
+            //Determine first how we want to sort the data.
             System.Console.WriteLine("How would you like to sort the data? Press G for Gender, N for Names or B for Birthdates");
             string sortOption = System.Console.ReadLine();
 
