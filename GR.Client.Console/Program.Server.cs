@@ -18,7 +18,7 @@ namespace GR.Client.Console
         /// <summary>
         /// This method will start the REST service.
         /// </summary>
-        private static void StartRESTService()
+        private static void StartService()
         {
             using (WebApp.Start<Startup>(url: _serviceEndPoint))
             {
@@ -58,8 +58,7 @@ namespace GR.Client.Console
 
             return people;
         }
-
-
+        
         /// <summary>
         /// This method will post a line number to our REST service.
         /// </summary>

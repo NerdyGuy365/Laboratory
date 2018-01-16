@@ -40,7 +40,7 @@ namespace GR.Client.Console
                     _people.AddRange(ParsePersonDataFromFile(file));
 
                 //Start REST service.
-                _serviceThread = new Thread(StartRESTService);
+                _serviceThread = new Thread(StartService);
                 _serviceThread.Start();
 
                 //Wait until the server is ready.
