@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="JSON\Response-Example.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

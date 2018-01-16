@@ -26,13 +26,10 @@ namespace GR.Client.Console
 
         private static Thread _serviceThread;
         private static bool _serverReady = false;
+        private static bool _displayDataDone = false;
 
         public static void Main(string[] args)
         {
-            //Determine first how we want to sort the data.
-            System.Console.WriteLine("How would you like to sort the data? Press G for Gender, N for Names or B for Birthdates");
-            string sortOption = System.Console.ReadLine();
-
             try
             {
                 //Combine the 3 files into a single set of records.
@@ -48,7 +45,7 @@ namespace GR.Client.Console
                     Thread.Sleep(1000);
 
                 //Server is ready....Now begin.
-                Start(sortOption);
+                Start();
             }
             catch
             {
@@ -64,6 +61,8 @@ namespace GR.Client.Console
         /// <param name="sortOption"></param>
         private static async void DisplayData(SortBy sortOption)
         {
+            _displayDataDone = false;
+
             //Let's grab the data and sort it correctly.
             List<Person> people = await GetData(sortOption);
 
@@ -75,6 +74,8 @@ namespace GR.Client.Console
             foreach (var person in people)
                 System.Console.WriteLine(person.FirstName + " " + person.LastName + " " + person.Gender + " " + person.FavoriteColor + " " + person.DateOfBirth.ToShortDateString());
                 System.Console.WriteLine("");
+
+            _displayDataDone = true;
         }
 
         /// <summary>
@@ -113,7 +114,7 @@ namespace GR.Client.Console
         /// This method will be posting some data and displaying it afterwards. 
         /// </summary>
         /// <param name="sortOption"></param>
-        private static void Start(string sortOption)
+        private static void Start()
         {
             //Let's post some data to the server.           
             PostData(15);
@@ -123,22 +124,31 @@ namespace GR.Client.Console
                 Thread.Sleep(1000);
 
             //Determine how the user wants to sort.
+
             //Display data to screen.
-            switch(sortOption.ToUpper())
-            {
-                case "B": //Birthdates
-                    DisplayData(SortBy.Birthdates);
-                    break;
+            System.Console.WriteLine("====================================================");
+            System.Console.WriteLine("Genders");
+            System.Console.WriteLine("====================================================");
 
-                case "G": //Genders
-                    DisplayData(SortBy.Genders);
-                    break;
+            DisplayData(SortBy.Genders);
 
-                case "N": //Names
-                default:
-                    DisplayData(SortBy.Names);
-                    break;
-            }
+            while(_displayDataDone == false)
+                Thread.Sleep(1000);
+
+            System.Console.WriteLine("====================================================");
+            System.Console.WriteLine("Birthdates");
+            System.Console.WriteLine("====================================================");
+
+            DisplayData(SortBy.Birthdates);
+
+            while (_displayDataDone == false)
+                Thread.Sleep(1000);
+
+            System.Console.WriteLine("====================================================");
+            System.Console.WriteLine("Names");
+            System.Console.WriteLine("====================================================");
+
+            DisplayData(SortBy.Names);
         }
     }
 }

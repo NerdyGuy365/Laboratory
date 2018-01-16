@@ -32,13 +32,12 @@ namespace GR.Client.Console
         /// </summary>
         /// <param name="sortOption"></param>
         private static async Task<List<Person>> GetData(SortBy sortOption)
-        {            
+        {
             List<Person> people = null;
 
             _actionDone = false;
 
-            //In the concept of a Factory...Decide on how we will sort it and sort it.
-            switch (sortOption)
+            switch(sortOption)
             {
                 case SortBy.Birthdates:
                     people = await _serviceClient.GetBirthDates().ConfigureAwait(false);
@@ -49,8 +48,7 @@ namespace GR.Client.Console
                     break;
 
                 case SortBy.Names:
-                default:
-                    people =  await _serviceClient.GetNames().ConfigureAwait(false);
+                    people = await _serviceClient.GetNames().ConfigureAwait(false);
                     break;
             }
 
