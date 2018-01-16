@@ -123,8 +123,6 @@ namespace GR.Client.Console
             while (_actionDone == false)
                 Thread.Sleep(1000);
 
-            //Determine how the user wants to sort.
-
             //Display data to screen.
             System.Console.WriteLine("====================================================");
             System.Console.WriteLine("Output 1 - Sorted By Genders");
