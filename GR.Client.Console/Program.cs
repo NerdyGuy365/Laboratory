@@ -12,6 +12,7 @@ using System.Threading;
 using System.Web.Http;
 using System.Net.Http;
 using Owin;
+using Microsoft.VisualBasic.FileIO;
 
 namespace GR.Client.Console
 {
@@ -36,7 +37,7 @@ namespace GR.Client.Console
             {
                 //Combine the 3 files into a single set of records.
                 foreach (var file in args)
-                    _people.AddRange(PersonHelpers.ParsePersonDataFromFile(file));
+                    _people.AddRange(ParsePersonDataFromFile(file));
 
                 //Start REST service.
                 _serviceThread = new Thread(StartRESTService);
@@ -58,6 +59,57 @@ namespace GR.Client.Console
         }
 
         /// <summary>
+        /// The following method is used to hit the REST service and data data to the screen.
+        /// </summary>
+        /// <param name="sortOption"></param>
+        private static async void DisplayData(string sortOption)
+        {
+            //Let's grab the data and sort it correctly.
+            List<Person> people = await GetData(sortOption);
+
+            //Wait until all posting to the server is complete.
+            while (_actionDone == false)
+                Thread.Sleep(1000);
+
+            //Print out values to screen.
+            foreach (var person in people)
+                System.Console.WriteLine(person.FirstName + " " + person.LastName + " " + person.Gender + " " + person.FavoriteColor + " " + person.DateOfBirth.ToShortDateString());
+                System.Console.WriteLine("");
+        }
+
+        /// <summary>
+        /// The following method will parse out the text from a delimited file.
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns></returns>
+        public static List<Person> ParsePersonDataFromFile(string filePath)
+        {
+            List<Person> people = new List<Person>();
+
+            //Declare local variables
+            string[] lineData = null;
+
+            //Handle parsing out the data from the file.
+            using (TextFieldParser parser = new TextFieldParser(filePath))
+            {
+                parser.Delimiters = new string[] { ",", " ", "|" };
+                while (true)
+                {
+                    lineData = parser.ReadFields();
+                    if (lineData == null)
+                    {
+                        break;
+                    }
+
+                    var person = new Person { LastName = lineData[0], FirstName = lineData[1], Gender = lineData[2], FavoriteColor = lineData[3], DateOfBirth = Convert.ToDateTime(lineData[4]) };
+                    people.Add(person);
+                }
+            }
+
+            return people;
+        }
+
+        /// <summary>
         /// This method will be posting some data and displaying it afterwards. 
         /// </summary>
         /// <param name="sortOption"></param>
@@ -72,21 +124,6 @@ namespace GR.Client.Console
 
             //Display our data to the screen.
             DisplayData(sortOption);
-        }
-
-        private static async void DisplayData(string sortOption)
-        {
-            //Let's grab the data and sort it correctly.
-            List<Person> people = await GetData(sortOption);
-
-            //Wait until all posting to the server is complete.
-            while (_actionDone == false)
-                Thread.Sleep(1000);
-
-            //Print out values to screen.
-            foreach (var person in people)
-                System.Console.WriteLine(person.FirstName + " " + person.LastName + " " + person.Gender + " " + person.FavoriteColor + " " + person.DateOfBirth.ToShortDateString());
-                System.Console.WriteLine("");
         }
     }
 }
