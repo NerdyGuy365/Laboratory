@@ -45,11 +45,7 @@ C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\LocalData\FileStruc
 C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\GR.Client.Console.exe.config
 C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\GR.Client.Console.exe
 C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\GR.Client.Console.pdb
-C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\GR.Business.dll
-C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\GR.Common.dll
 C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\GR.Contracts.dll
-C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\GR.Data.dll
-C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\GR.Manager.dll
 C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\Microsoft.Owin.Diagnostics.dll
 C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\Microsoft.Owin.dll
 C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\Microsoft.Owin.Host.HttpListener.dll
@@ -59,15 +55,7 @@ C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\Owin.dll
 C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\System.Net.Http.Formatting.dll
 C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\System.Web.Http.dll
 C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\System.Web.Http.Owin.dll
-C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\GR.Business.pdb
-C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\GR.Business.dll.config
-C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\GR.Common.pdb
-C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\GR.Common.dll.config
 C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\GR.Contracts.pdb
-C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\GR.Data.pdb
-C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\GR.Data.dll.config
-C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\GR.Manager.pdb
-C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\GR.Manager.dll.config
 C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\Microsoft.Owin.xml
 C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\Microsoft.Owin.Diagnostics.xml
 C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\Microsoft.Owin.Host.HttpListener.xml

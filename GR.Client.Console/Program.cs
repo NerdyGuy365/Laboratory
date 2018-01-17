@@ -1,18 +1,13 @@
-﻿using GR.Business;
-using GR.Client.Console;
+﻿
 using GR.Contracts.DataContracts;
-using Microsoft.Owin.Hosting;
+
+using Microsoft.VisualBasic.FileIO;
+
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Threading;
-using System.Web.Http;
-using System.Net.Http;
-using Owin;
-using Microsoft.VisualBasic.FileIO;
 
 namespace GR.Client.Console
 {

@@ -45,4 +45,3 @@ C:\Development\Repos\NerdyGuy365\GR.Client\GR.Common\bin\Debug\System.Net.Http.W
 C:\Development\Repos\NerdyGuy365\GR.Client\GR.Common\bin\Debug\Vse.Web.Serialization.pdb
 C:\Development\Repos\NerdyGuy365\GR.Client\GR.Common\obj\Debug\GR.Common.dll
 C:\Development\Repos\NerdyGuy365\GR.Client\GR.Common\obj\Debug\GR.Common.pdb
-C:\Development\Repos\NerdyGuy365\GR.Client\GR.Common\obj\Debug\GR.Common.csprojResolveAssemblyReference.cache

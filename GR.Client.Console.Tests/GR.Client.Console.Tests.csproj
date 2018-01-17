@@ -96,10 +96,6 @@
       <Project>{5432FEA9-DB0A-4C9B-BC98-68B23BE9592D}</Project>
       <Name>GR.Contracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GR.Data\GR.Data.csproj">
-      <Project>{41147f75-88dc-49d0-9615-596185c4877d}</Project>
-      <Name>GR.Data</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

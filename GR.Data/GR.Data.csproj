@@ -47,10 +47,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GR.Client\GR.Common\GR.Common.csproj">
-      <Project>{aa7add82-7540-443f-a13e-affd9fb1292b}</Project>
-      <Name>GR.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\GR.Contracts\GR.Contracts.csproj">
       <Project>{5432fea9-db0a-4c9b-bc98-68b23be9592d}</Project>
       <Name>GR.Contracts</Name>

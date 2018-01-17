@@ -106,10 +106,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\GR.Business\GR.Business.csproj">
-      <Project>{C6E2268B-D14A-466C-B1DD-218F46270F86}</Project>
-      <Name>GR.Business</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\GR.Contracts\GR.Contracts.csproj">
       <Project>{5432FEA9-DB0A-4C9B-BC98-68B23BE9592D}</Project>
       <Name>GR.Contracts</Name>
@@ -117,10 +113,6 @@
     <ProjectReference Include="..\..\GR.Data\GR.Data.csproj">
       <Project>{41147F75-88DC-49D0-9615-596185C4877D}</Project>
       <Name>GR.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\GR.REST\GR.REST.csproj">
-      <Project>{D6B6D2C6-8196-4E85-84FE-0EE8AB838F46}</Project>
-      <Name>GR.REST</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

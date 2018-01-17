@@ -1,11 +1,9 @@
 ﻿using GR.Contracts.DataContracts;
-using GR.Data;
-using GR.Manager;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Web.Http;
 
 namespace GR.Client.Console

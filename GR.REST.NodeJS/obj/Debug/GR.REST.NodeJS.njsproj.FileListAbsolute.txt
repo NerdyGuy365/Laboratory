@@ -1,2 +1,1 @@
-C:\Development\Repos\NerdyGuy365\GR.REST.NodeJS\obj\Debug\GR.REST.NodeJS.njsprojResolveAssemblyReference.cache
 C:\Development\Repos\NerdyGuy365\GR.REST.NodeJS\bin\Microsoft.NodejsTools.WebRole.dll
