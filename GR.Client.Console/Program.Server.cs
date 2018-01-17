@@ -60,7 +60,7 @@ namespace GR.Client.Console
         /// <summary>
         /// This method will post a line number to our REST service.
         /// </summary>
-        private static void PostData(int numberOfLines)
+        private static async void PostData(int numberOfLines)
         {
             _actionDone = false;
 
@@ -68,7 +68,9 @@ namespace GR.Client.Console
             try
             {
                 for (int i = 0; i < numberOfLines; i++)
-                    _serviceClient.PostRecord(_people[i]);
+                {
+                    await _serviceClient.PostRecord(_people[i]);
+                }
             }
             catch 
             {

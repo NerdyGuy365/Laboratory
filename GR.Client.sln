@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GR.Client", "GR.Client\GR.Client.csproj", "{183BCC02-FE62-4C72-BB6D-05447F32CFC8}"
 EndProject
@@ -26,6 +26,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GR.Client.Console", "GR.Client.Console\GR.Client.Console.csproj", "{B241E90F-9E7D-4C68-B64D-BAC82155A551}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GR.Client.Console.Tests", "GR.Client.Console.Tests\GR.Client.Console.Tests.csproj", "{CE195129-54FD-48C1-A1B8-9F71610BACFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GR.Client.Web", "GR.Client.Web\GR.Client.Web.csproj", "{DB323CF6-6ED9-434F-B813-E537381D91BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{CE195129-54FD-48C1-A1B8-9F71610BACFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE195129-54FD-48C1-A1B8-9F71610BACFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE195129-54FD-48C1-A1B8-9F71610BACFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB323CF6-6ED9-434F-B813-E537381D91BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB323CF6-6ED9-434F-B813-E537381D91BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB323CF6-6ED9-434F-B813-E537381D91BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB323CF6-6ED9-434F-B813-E537381D91BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

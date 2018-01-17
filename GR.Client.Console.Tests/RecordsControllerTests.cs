@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using GR.Contracts.DataContracts;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
+using System.Web.Http;
+using System.Web.Http.Results;
 
 namespace GR.Client.Console.Tests
 {
@@ -37,11 +39,180 @@ namespace GR.Client.Console.Tests
             RecordsController controller = new RecordsController();
 
             //Setup test.
-            var people = GetDummyData().Take(2); //Let's only take 2 for our test.
+            Person person = (Person)GetDummyData().Take(1).Select(s => s).SingleOrDefault(); //Let's only one for our test.
 
             //Conduct Test Experiment.
-            foreach (var person in people)
-                controller.SavePerson(person);
+            CreatedNegotiatedContentResult<List<Person>> result = (CreatedNegotiatedContentResult<List<Person>>)controller.SavePerson(person);
+
+            //Make sure we got a success result back.
+            Assert.IsTrue(result.Content != null && result.Content.Count > 0);
+        }
+
+        [TestMethod()]
+        public void Does_Save_Person_Store_Items_Fail()
+        {
+            //Local variables.
+            RecordsController controller = new RecordsController();
+
+            //Conduct Test Experiment.
+            ExceptionResult result = (ExceptionResult)controller.SavePerson(null);
+            
+            //Make sure we got a success result back.
+            Assert.IsTrue(result.Exception != null);
+        }
+
+        [TestMethod()]
+        public void Is_BirthDates_Sorted_Correctly()
+        {
+            //Local variables.
+            RecordsController controller = new RecordsController();
+
+            //Conduct Test Experiment.
+            List<Person> people = (List<Person>)GetDummyData();
+
+            controller.SavePerson(people[0]);
+            controller.SavePerson(people[1]);
+            controller.SavePerson(people[2]);
+            controller.SavePerson(people[3]);
+            controller.SavePerson(people[4]);
+            controller.SavePerson(people[5]);
+            controller.SavePerson(people[6]);
+            controller.SavePerson(people[7]);
+            controller.SavePerson(people[8]);
+            controller.SavePerson(people[9]);
+            controller.SavePerson(people[10]);
+            controller.SavePerson(people[11]);
+
+            var results = (OkNegotiatedContentResult<List<Person>>)controller.GetBirthDates();
+
+            //Determine Test Results
+
+            //Make sure we have results.
+            if (results == null || results.Content.Count == 0)
+                Assert.IsTrue(true == false); //Test fails automatically with no data.
+
+            //Since we can control the testing data.
+            //We need to make sure the data is sorted by birth ascending.
+            //So let's check the first and last birthdates to ensure this.
+            Assert.IsTrue(results.Content[0].DateOfBirth.ToShortDateString() == "1/1/1979" && results.Content[4].DateOfBirth.ToShortDateString() == "1/1/1983");
+        }
+
+        [TestMethod()]
+        public void Is_BirthDates_Sorted_Fail()
+        {
+            //Local variables.
+            RecordsController controller = new RecordsController();
+
+            //Conduct Test Experiment.         
+            ExceptionResult result = (ExceptionResult)controller.GetBirthDates();
+
+            //Determine Test Results
+
+            //Make sure we got a success result back.
+            Assert.IsTrue(result.Exception != null);
+        }
+
+        [TestMethod()]
+        public void Is_Genders_Sorted_Correctly()
+        {
+            //Local variables.
+            RecordsController controller = new RecordsController();
+
+            //Conduct Test Experiment.
+            List<Person> people = (List<Person>)GetDummyData(); 
+
+            controller.SavePerson(people[0]);
+            controller.SavePerson(people[1]);
+            controller.SavePerson(people[2]);
+            controller.SavePerson(people[3]);
+            controller.SavePerson(people[4]);
+            controller.SavePerson(people[5]);
+            controller.SavePerson(people[6]);
+            controller.SavePerson(people[7]);
+            controller.SavePerson(people[8]);
+            controller.SavePerson(people[9]);
+            controller.SavePerson(people[10]);
+            controller.SavePerson(people[11]);
+
+            var results = (OkNegotiatedContentResult<List<Person>>)controller.GetGenders();
+
+            //Determine Test Results
+
+            //Make sure we have results.
+            if (results == null || results.Content.Count == 0)
+                Assert.IsTrue(true == false); //Test fails automatically with no data.
+
+            //Since we can control the testing data.
+            //We need to make sure the data is sorted by gender female first.
+            //So let's check the first one which should be female.
+            //The fifth one should start the males.
+            Assert.IsTrue((results.Content[0].Gender == "Female" && results.Content[0].LastName == "Helena") && results.Content[6].Gender == "Male");
+        }
+
+        [TestMethod()]
+        public void Is_Genders_Sorted_Fail()
+        {
+            //Local variables.
+            RecordsController controller = new RecordsController();
+
+            //Conduct Test Experiment.         
+            ExceptionResult result = (ExceptionResult)controller.GetGenders();
+
+            //Determine Test Results
+
+            //Make sure we got a success result back.
+            Assert.IsTrue(result.Exception != null);
+        }
+
+        [TestMethod()]
+        public void Is_Names_Sorted_Correctly()
+        {
+            //Local variables.
+            RecordsController controller = new RecordsController();
+
+            //Conduct Test Experiment.
+            List<Person> people = (List<Person>)GetDummyData();
+
+            controller.SavePerson(people[0]);
+            controller.SavePerson(people[1]);
+            controller.SavePerson(people[2]);
+            controller.SavePerson(people[3]);
+            controller.SavePerson(people[4]);
+            controller.SavePerson(people[5]);
+            controller.SavePerson(people[6]);
+            controller.SavePerson(people[7]);
+            controller.SavePerson(people[8]);
+            controller.SavePerson(people[9]);
+            controller.SavePerson(people[10]);
+            controller.SavePerson(people[11]);
+
+            var results = (OkNegotiatedContentResult<List<Person>>)controller.GetNames();
+
+            //Determine Test Results
+
+            //Make sure we have results.
+            if (results == null || results.Content.Count == 0)
+                Assert.IsTrue(true == false); //Test fails automatically with no data.
+
+            //Since we can control the testing data.
+            //We need to make sure the data is sorted by last name desc.
+            //So let's check the first.
+            Assert.IsTrue(results.Content[0].LastName == "Molly");
+        }
+
+        [TestMethod()]
+        public void Is_Names_Sorted_Fail()
+        {
+            //Local variables.
+            RecordsController controller = new RecordsController();
+
+            //Conduct Test Experiment.         
+            ExceptionResult result = (ExceptionResult)controller.GetNames();
+
+            //Determine Test Results
+
+            //Make sure we got a success result back.
+            Assert.IsTrue(result.Exception != null);
         }
     }
 }

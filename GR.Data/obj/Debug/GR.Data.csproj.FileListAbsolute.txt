@@ -27,3 +27,17 @@ C:\Repo\NerdyGuy365\Laboratory\GR.Data\obj\Debug\GR.Data.csprojResolveAssemblyRe
 C:\Repo\NerdyGuy365\Laboratory\GR.Data\obj\Debug\GR.Data.csproj.CoreCompileInputs.cache
 C:\Repo\NerdyGuy365\Laboratory\GR.Data\obj\Debug\GR.Data.dll
 C:\Repo\NerdyGuy365\Laboratory\GR.Data\obj\Debug\GR.Data.pdb
+C:\Development\Repos\NerdyGuy365\GR.Data\bin\Debug\GR.Data.dll.config
+C:\Development\Repos\NerdyGuy365\GR.Data\bin\Debug\GR.Data.dll
+C:\Development\Repos\NerdyGuy365\GR.Data\bin\Debug\GR.Data.pdb
+C:\Development\Repos\NerdyGuy365\GR.Data\bin\Debug\GR.Common.dll
+C:\Development\Repos\NerdyGuy365\GR.Data\bin\Debug\GR.Contracts.dll
+C:\Development\Repos\NerdyGuy365\GR.Data\bin\Debug\Newtonsoft.Json.dll
+C:\Development\Repos\NerdyGuy365\GR.Data\bin\Debug\System.Net.Http.Formatting.dll
+C:\Development\Repos\NerdyGuy365\GR.Data\bin\Debug\GR.Common.pdb
+C:\Development\Repos\NerdyGuy365\GR.Data\bin\Debug\GR.Common.dll.config
+C:\Development\Repos\NerdyGuy365\GR.Data\bin\Debug\GR.Contracts.pdb
+C:\Development\Repos\NerdyGuy365\GR.Data\bin\Debug\Newtonsoft.Json.xml
+C:\Development\Repos\NerdyGuy365\GR.Data\obj\Debug\GR.Data.csprojResolveAssemblyReference.cache
+C:\Development\Repos\NerdyGuy365\GR.Data\obj\Debug\GR.Data.dll
+C:\Development\Repos\NerdyGuy365\GR.Data\obj\Debug\GR.Data.pdb

@@ -79,6 +79,9 @@ namespace GR.Client.Console
         [HttpPost]
         public IHttpActionResult SavePerson([FromBody]Person person)
         {
+            //Make sure person is something.
+            if (person == null) return InternalServerError(new Exception("Please pass in valid data"));
+
             //Add to in memory static collection.
             _people.Add(person);
 

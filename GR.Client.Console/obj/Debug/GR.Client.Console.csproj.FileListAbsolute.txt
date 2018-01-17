@@ -39,9 +39,6 @@ C:\Repo\NerdyGuy365\Laboratory\GR.Client.Console\bin\Debug\Microsoft.Owin.Hostin
 C:\Repo\NerdyGuy365\Laboratory\GR.Client.Console\bin\Debug\System.Net.Http.Formatting.xml
 C:\Repo\NerdyGuy365\Laboratory\GR.Client.Console\bin\Debug\System.Web.Http.xml
 C:\Repo\NerdyGuy365\Laboratory\GR.Client.Console\bin\Debug\System.Web.Http.Owin.xml
-C:\Development\Repos\NerdyGuy365\GR.Client.Console\obj\Debug\GR.Client.Console.csprojResolveAssemblyReference.cache
-C:\Development\Repos\NerdyGuy365\GR.Client.Console\obj\Debug\GR.Client.Console.exe
-C:\Development\Repos\NerdyGuy365\GR.Client.Console\obj\Debug\GR.Client.Console.pdb
 C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\LocalData\FileStructure1.txt
 C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\LocalData\FileStructure2.txt
 C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\LocalData\FileStructure3.txt
@@ -79,3 +76,6 @@ C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\Newtonsoft.Json.xml
 C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\System.Net.Http.Formatting.xml
 C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\System.Web.Http.xml
 C:\Development\Repos\NerdyGuy365\GR.Client.Console\bin\Debug\System.Web.Http.Owin.xml
+C:\Development\Repos\NerdyGuy365\GR.Client.Console\obj\Debug\GR.Client.Console.csprojResolveAssemblyReference.cache
+C:\Development\Repos\NerdyGuy365\GR.Client.Console\obj\Debug\GR.Client.Console.exe
+C:\Development\Repos\NerdyGuy365\GR.Client.Console\obj\Debug\GR.Client.Console.pdb

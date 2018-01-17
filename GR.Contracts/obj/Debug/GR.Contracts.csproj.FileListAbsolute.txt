@@ -9,3 +9,7 @@ C:\Repo\NerdyGuy365\Laboratory\GR.Contracts\obj\Debug\GR.Contracts.csprojResolve
 C:\Repo\NerdyGuy365\Laboratory\GR.Contracts\obj\Debug\GR.Contracts.csproj.CoreCompileInputs.cache
 C:\Repo\NerdyGuy365\Laboratory\GR.Contracts\obj\Debug\GR.Contracts.dll
 C:\Repo\NerdyGuy365\Laboratory\GR.Contracts\obj\Debug\GR.Contracts.pdb
+C:\Development\Repos\NerdyGuy365\GR.Contracts\bin\Debug\GR.Contracts.dll
+C:\Development\Repos\NerdyGuy365\GR.Contracts\bin\Debug\GR.Contracts.pdb
+C:\Development\Repos\NerdyGuy365\GR.Contracts\obj\Debug\GR.Contracts.dll
+C:\Development\Repos\NerdyGuy365\GR.Contracts\obj\Debug\GR.Contracts.pdb

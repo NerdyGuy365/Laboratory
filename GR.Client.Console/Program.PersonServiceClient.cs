@@ -16,7 +16,7 @@ namespace GR.Client.Console
         private string _serviceEndPoint = ConfigurationManager.AppSettings["RESTURI"];
 
         /// <summary>
-        /// 
+        /// Used to get a listing of people sorted by birth dates.
         /// </summary>
         /// <returns></returns>
         public async Task<List<Person>> GetBirthDates()
@@ -38,6 +38,10 @@ namespace GR.Client.Console
             return results;
         }
 
+        /// <summary>
+        /// Used to get a listing of people sorted by genders.
+        /// </summary>
+        /// <returns></returns>
         public async Task<List<Person>> GetGenders()
         {
             //Declare variables
@@ -57,6 +61,10 @@ namespace GR.Client.Console
             return results;
         }
 
+        /// <summary>
+        /// Used to get a listing of people sorted by names.
+        /// </summary>
+        /// <returns></returns>
         public async Task<List<Person>> GetNames()
         {
             //Declare variables
@@ -76,7 +84,12 @@ namespace GR.Client.Console
             return results;
         }
 
-        public async void PostRecord(Person person)
+        /// <summary>
+        /// Used to save a person.
+        /// </summary>
+        /// <param name="person"></param>
+        /// <returns></returns>
+        public async Task<List<Person>> PostRecord(Person person)
         {
             //Declare variables
             HttpClient<Person> httpClient = new HttpClient<Person>(_serviceEndPoint + "/Records");
@@ -87,6 +100,15 @@ namespace GR.Client.Console
             //Return the status code of the service call.
             if (response.StatusCode != System.Net.HttpStatusCode.Created)
                 throw new Exception("Something went wrong in saving the data...Technicial support has been notified.");
+
+            //In a lot of situations after a post.
+            //We can return back the object that was posted.
+            //There are a lot of times state data could be altered.
+            //Create a POCO from our results.
+            var result = JsonConvert.DeserializeObject<List<Person>> (response.Content.ReadAsStringAsync().Result);
+
+            //Return the result back to the caller.
+            return result;
         }
     }
 }
