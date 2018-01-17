@@ -41,8 +41,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GR.CrossPlatform.Xamarin.UW
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		GR.CrossPlatform.Xamarin\GR.CrossPlatform.Xamarin\GR.CrossPlatform.Xamarin.projitems*{10e36ddd-1f6a-4259-9a88-a42773c750eb}*SharedItemsImports = 4
-		GR.CrossPlatform.Xamarin\GR.CrossPlatform.Xamarin\GR.CrossPlatform.Xamarin.projitems*{20aae886-8178-4d3d-a951-0381f418364a}*SharedItemsImports = 4
 		GR.CrossPlatform.Xamarin\GR.CrossPlatform.Xamarin\GR.CrossPlatform.Xamarin.projitems*{bd718361-c65e-41ba-ac47-de13afa7c77a}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
