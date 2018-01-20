@@ -55,6 +55,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GR.Business\GR.Business.csproj">
+      <Project>{c6e2268b-d14a-466c-b1dd-218f46270f86}</Project>
+      <Name>GR.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GR.Client\GR.Common\GR.Common.csproj">
       <Project>{AA7ADD82-7540-443F-A13E-AFFD9FB1292B}</Project>
       <Name>GR.Common</Name>

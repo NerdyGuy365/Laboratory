@@ -47,6 +47,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GR.Business\GR.Business.csproj">
+      <Project>{c6e2268b-d14a-466c-b1dd-218f46270f86}</Project>
+      <Name>GR.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GR.Contracts\GR.Contracts.csproj">
       <Project>{5432fea9-db0a-4c9b-bc98-68b23be9592d}</Project>
       <Name>GR.Contracts</Name>

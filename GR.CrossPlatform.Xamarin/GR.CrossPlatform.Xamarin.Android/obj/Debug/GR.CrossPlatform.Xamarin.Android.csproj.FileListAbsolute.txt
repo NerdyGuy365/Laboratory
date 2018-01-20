@@ -22,8 +22,6 @@ C:\Development\Repos\NerdyGuy365\GR.CrossPlatform.Xamarin\GR.CrossPlatform.Xamar
 C:\Development\Repos\NerdyGuy365\GR.CrossPlatform.Xamarin\GR.CrossPlatform.Xamarin.Android\bin\Debug\Xamarin.Forms.Xaml.pdb
 C:\Development\Repos\NerdyGuy365\GR.CrossPlatform.Xamarin\GR.CrossPlatform.Xamarin.Android\bin\Debug\Xamarin.Forms.Xaml.xml
 C:\Development\Repos\NerdyGuy365\GR.CrossPlatform.Xamarin\GR.CrossPlatform.Xamarin.Android\obj\Debug\GR.CrossPlatform.Xamarin.Android.csprojResolveAssemblyReference.cache
-C:\Development\Repos\NerdyGuy365\GR.CrossPlatform.Xamarin\GR.CrossPlatform.Xamarin.Android\obj\Debug\GR.CrossPlatform.Xamarin.Droid.MainPage.xaml.g.cs
-C:\Development\Repos\NerdyGuy365\GR.CrossPlatform.Xamarin\GR.CrossPlatform.Xamarin.Android\obj\Debug\GR.CrossPlatform.Xamarin.Droid.App.xaml.g.cs
 C:\Development\Repos\NerdyGuy365\GR.CrossPlatform.Xamarin\GR.CrossPlatform.Xamarin.Android\obj\Debug\GR.CrossPlatform.Xamarin.Android.dll
 C:\Development\Repos\NerdyGuy365\GR.CrossPlatform.Xamarin\GR.CrossPlatform.Xamarin.Android\obj\Debug\GR.CrossPlatform.Xamarin.Android.pdb
 C:\Development\Repos\NerdyGuy365\GR.CrossPlatform.Xamarin\GR.CrossPlatform.Xamarin.Android\obj\Debug\android\bin\GR.CrossPlatform.Xamarin.Android.apk
@@ -37,9 +35,3 @@ C:\Development\Repos\NerdyGuy365\GR.CrossPlatform.Xamarin\GR.CrossPlatform.Xamar
 C:\Development\Repos\NerdyGuy365\GR.CrossPlatform.Xamarin\GR.CrossPlatform.Xamarin.Android\bin\Debug\Xamarin.Forms.Core.dll.mdb
 C:\Development\Repos\NerdyGuy365\GR.CrossPlatform.Xamarin\GR.CrossPlatform.Xamarin.Android\bin\Debug\Xamarin.Forms.Platform.Android.dll.mdb
 C:\Development\Repos\NerdyGuy365\GR.CrossPlatform.Xamarin\GR.CrossPlatform.Xamarin.Android\bin\Debug\Xamarin.Forms.Xaml.dll.mdb
-C:\Development\Repos\NerdyGuy365\GR.CrossPlatform.Xamarin\GR.CrossPlatform.Xamarin.Android\bin\Debug\GR.CrossPlatform.Xamarin.Android.dll.mdb
-C:\Development\Repos\NerdyGuy365\GR.CrossPlatform.Xamarin\GR.CrossPlatform.Xamarin.Android\obj\Debug\android\assets\FormsViewGroup.dll.mdb
-C:\Development\Repos\NerdyGuy365\GR.CrossPlatform.Xamarin\GR.CrossPlatform.Xamarin.Android\obj\Debug\android\assets\GR.CrossPlatform.Xamarin.Android.dll.mdb
-C:\Development\Repos\NerdyGuy365\GR.CrossPlatform.Xamarin\GR.CrossPlatform.Xamarin.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
-C:\Development\Repos\NerdyGuy365\GR.CrossPlatform.Xamarin\GR.CrossPlatform.Xamarin.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
-C:\Development\Repos\NerdyGuy365\GR.CrossPlatform.Xamarin\GR.CrossPlatform.Xamarin.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb

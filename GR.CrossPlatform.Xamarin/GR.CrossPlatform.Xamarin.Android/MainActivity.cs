@@ -20,7 +20,7 @@ namespace GR.CrossPlatform.Xamarin.Droid
 			base.OnCreate (bundle);
 
 			global::Xamarin.Forms.Forms.Init (this, bundle);
-			LoadApplication (new GR.CrossPlatform.Xamarin.App ());
+			//LoadApplication (new GR.CrossPlatform.Xamarin.App ());
 		}
 	}
 }

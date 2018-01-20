@@ -1,5 +1,4 @@
-﻿using GR.Business;
-using GR.Common;
+﻿using GR.Common;
 using GR.Contracts.DataContracts;
 using GR.Contracts.ServiceContracts;
 using GR.Data;
