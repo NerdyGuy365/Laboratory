@@ -38,7 +38,7 @@ namespace GR.Client.Console
 
             config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/json"));
 
-            // configure caching
+            //Set configuration.
             app.UseWebApi(config);
         }
     }

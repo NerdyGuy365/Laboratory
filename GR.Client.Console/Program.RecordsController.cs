@@ -43,7 +43,7 @@ namespace GR.Client.Console
         public IHttpActionResult GetGenders()
         {
             //Make sure we have something to return.
-            //Let the client know if we don't.l
+            //Let the client know if we don't.
             if (_people == null || _people.Count == 0) return InternalServerError(new Exception("No records found"));
 
             //Get results and sort correctly.
